@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item
+        android:id="@+id/nav_contactanos"
+        android:title="Contáctenos" />
+
+    <group android:checkableBehavior="single">
+        <item android:title="Configuración">
+            <menu>
+                <item
+                    android:id="@+id/nav_actualizacion"
+                    android:title="Buscar actualizacion" />
+
+                <item
+                    android:id="@+id/nav_compartir_api"
+                    android:title="Compartir aplicación" />
+
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Administración">
+            <menu>
+                <item
+                    android:id="@+id/mnucerrarsesion"
+                    android:title="Cerrar Sesion" />
+            </menu>
+        </item>
+    </group>
+
+
+</menu>

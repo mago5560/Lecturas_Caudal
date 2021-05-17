@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FragmResumen">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingTop="20dp"
+            android:id="@+id/llyFecha">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/lblFecha"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="dd/MM/yyyy"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llyFecha"
+            android:id="@+id/btnActualizar"
+            android:text="ACTUALIZAR"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_light"
+            android:background="@android:color/transparent"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/start"
+                android:layout_width="230dp"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:srcCompat="@drawable/water"
+                android:alpha="0.7"
+                tools:ignore="ContentDescription,InefficientWeight,UnusedAttribute" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="450dp"
+                android:layout_height="450dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="false"
+                android:max="5"
+                android:progress="0"
+                android:progressDrawable="@drawable/progressbar_font_max" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="0.00"
+                android:id="@+id/lblUltimaLectura"
+                android:textSize="60dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ULTIMA LECTURA"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/btnVerDetalle"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="125,327.07"
+                android:id="@+id/lblTotalLectura"
+                android:textSize="60dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TOTAL m3 A LA FECHA"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnVerDetalle"
+            android:text="VER DETALLE"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_light"
+            android:background="@android:color/transparent"/>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

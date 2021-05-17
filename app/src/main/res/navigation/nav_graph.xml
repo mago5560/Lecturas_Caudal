@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmResumen">
+
+    <fragment
+        android:id="@+id/fragmResumen"
+        android:name="com.sandiego.lecturascaudal.Fragment.FragmResumen"
+        android:label="fragm_resumen"
+        tools:layout="@layout/fragm_resumen">
+        <action
+            android:id="@+id/nex_actions"
+            app:destination="@id/fragmDetalle"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="Fecha"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmDetalle"
+        android:name="com.sandiego.lecturascaudal.Fragment.FragmLecturas"
+        android:label="fragm_detalle"
+        tools:layout="@layout/fragm_lecturas" >
+        <argument
+            android:name="Fecha"
+            app:argType="string" />
+    </fragment>
+    <activity
+        android:id="@+id/mactyLogin"
+        android:name="com.sandiego.lecturascaudal.MactyLogin"
+        android:label="macty_login"
+        tools:layout="@layout/macty_login" />
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FragmLecturas">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="20dp"
+                android:id="@+id/llyFecha">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/calendar"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/lblFecha"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:text="dd/MM/yyyy"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/datos_header"/>
+            <include layout="@layout/app_datos"/>
+
+        </LinearLayout>
+
+
+</FrameLayout>
